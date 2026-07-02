@@ -1,5 +1,6 @@
-from geo_calculator.calculations import find_average, gardners_equation, inverse_gardners_equation
 import pytest
+
+from geo_calculator.calculations import find_average, gardners_equation, inverse_gardners_equation
 
 
 def test_find_average_given_list_of_numbers():
@@ -31,11 +32,11 @@ def test_inverse_gardners_equation() -> None:
 
 def test_gardners_equation_negative_velocity() -> None:
     velocity = -1000  # m/s
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(ValueError):
         gardners_equation(velocity)
 
 
 def test_inverse_gardners_equation_negative_density() -> None:
     density = -1000  # g/cm3
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(ValueError):
         inverse_gardners_equation(density)
