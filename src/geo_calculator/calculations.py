@@ -15,3 +15,12 @@ def gardners_equation(velocity):
         The density of the material
     """
     return 0.31 * velocity ** 0.25
+
+def inverse_gardners_equation(density):
+    """Calculate velocity from density using the inverse Gardner's equation
+    Args:
+        density: The density of the material in g/cm3
+    Returns:
+        The velocity of the material in m/s
+    """
+    return (density / 0.31) ** 4
