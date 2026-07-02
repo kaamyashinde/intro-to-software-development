@@ -14,6 +14,8 @@ def gardners_equation(velocity):
     Returns:
         The density of the material
     """
+    if velocity <= 0:
+        raise ValueError("Velocity must be greater than 0")
     return 0.31 * velocity ** 0.25
 
 def inverse_gardners_equation(density):
@@ -23,4 +25,6 @@ def inverse_gardners_equation(density):
     Returns:
         The velocity of the material in m/s
     """
+    if density <= 0:
+        raise ValueError("Density must be greater than 0")
     return (density / 0.31) ** 4
