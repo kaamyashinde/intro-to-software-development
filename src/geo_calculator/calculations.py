@@ -1,2 +1,2 @@
-def find_average(numbers: list[int]) -> float:
-    return sum(numbers) / len(numbers)
+def find_average(numbers):
+    return sum(numbers) / len(numbers)  
